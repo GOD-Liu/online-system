@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理界面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>后台管理界面</h1>
+        <div class="filters">
+            <label for="name-filter">按姓名查询:</label>
+            <input type="text" id="name-filter" placeholder="输入姓名查询">
+
+            <label for="company-filter">按单位筛选:</label>
+            <select id="company-filter">
+                <option value="">全部</option>
+                <option value="客运公司">客运公司</option>
+                <option value="客服公司">客服公司</option>
+                <option value="潍城交运">潍城交运</option>
+                <option value="汽车总站">汽车总站</option>
+            </select>
+
+            <label for="start-date">开始日期:</label>
+            <input type="date" id="start-date">
+
+            <label for="end-date">结束日期:</label>
+            <input type="date" id="end-date">
+
+            <button id="filter">筛选</button>
+            <button id="download">下载数据</button>
+        </div>
+        <table id="submissions-table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>单位</th>
+                    <th>包车牌号</th>
+                    <th>签名</th>
+                    <th>提交时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 数据行将由JavaScript动态填充 -->
+            </tbody>
+        </table>
+        <div class="user-management">
+            <h2>用户管理</h2>
+            <form id="create-user-form">
+                <label for="new-username">用户名:</label>
+                <input type="text" id="new-username" name="username" required>
+
+                <label for="new-password">密码:</label>
+                <input type="password" id="new-password" name="password" required>
+
+                <label for="new-role">角色:</label>
+                <select id="new-role" name="role">
+                    <option value="sub_admin">子管理员</option>
+                </select>
+
+                <label for="new-company">单位:</label>
+                <select id="new-company" name="company">
+                    <option value="客运公司">客运公司</option>
+                    <option value="客服公司">客服公司</option>
+                    <option value="潍城交运">潍城交运</option>
+                    <option value="汽车总站">汽车总站</option>
+                </select>
+
+                <button type="submit">创建用户</button>
+            </form>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

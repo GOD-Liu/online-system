@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单收集系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>表单收集系统</h1>
+        <form id="form">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">电话:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="company">单位:</label>
+            <select id="company" name="company" required>
+                <option value="客运公司">客运公司</option>
+                <option value="客服公司">客服公司</option>
+                <option value="潍城交运">潍城交运</option>
+                <option value="汽车总站">汽车总站</option>
+            </select>
+
+            <label for="plate">包车牌号:</label>
+            <input type="text" id="plate" name="plate" required>
+
+            <label for="signature">手写签名:</label>
+            <canvas id="signature-pad" width="400" height="200" style="border:1px solid #000;"></canvas>
+            <button type="button" id="clear-signature">清除签名</button>
+
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
